@@ -46,4 +46,17 @@ defmodule Advent.Day1Test do
       assert 411 == Day1.calculate_frequency()
     end
   end
+
+  describe "Day1.calibrate_frequency/1" do
+    test "with examples" do
+      assert Day1.calibrate_frequency("+1, -1") == 0
+      assert Day1.calibrate_frequency("+3, +3, +4, -2, -4") == 10
+      assert Day1.calibrate_frequency("-6, +3, +8, +5, -6") == 5
+      assert Day1.calibrate_frequency("+7, +7, -2, -7, -4") == 14
+    end
+
+    test "with data" do
+      assert Day1.calibrate_frequency() == 56360
+    end
+  end
 end
